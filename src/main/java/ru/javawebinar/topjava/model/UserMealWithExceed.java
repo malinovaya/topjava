@@ -17,4 +17,8 @@ public class UserMealWithExceed {
         this.calories = calories;
         this.exceed = exceed;
     }
+
+    public String getDescription() {
+        return description;
+    }
 }
