@@ -27,4 +27,11 @@ public class MealTo {
                 ", excess=" + excess +
                 '}';
     }
+
+    public LocalDateTime getDateTime() {return dateTime;}
+    public String getDescription() {return description;}
+    public int getCalories() {return calories;}
+    public boolean isExceed() {return excess;}
+
+
 }
