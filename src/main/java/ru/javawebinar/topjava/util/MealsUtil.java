@@ -8,6 +8,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.Month;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Collector;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -24,6 +25,8 @@ public class MealsUtil {
             new Meal(LocalDateTime.of(2015, Month.MAY, 31, 13, 0), "Обед", 500),
             new Meal(LocalDateTime.of(2015, Month.MAY, 31, 20, 0), "Ужин", 510)
     );
+
+
 
     public static void main(String[] args) {
 
@@ -110,7 +113,7 @@ public class MealsUtil {
     }
 
     private static MealTo createWithExcess(Meal meal, boolean excess) {
-        return new MealTo(meal.getDateTime(), meal.getDescription(), meal.getCalories(), excess);
+        return new MealTo(meal.getMealId(),meal.getDateTime(), meal.getDescription(), meal.getCalories(), excess);
     }
 
 
