@@ -34,9 +34,10 @@ public class MealServlet extends HttpServlet {
 
             if (action.equalsIgnoreCase("delete")) {
                 int id = Integer.parseInt(request.getParameter("mealToId"));
-                for (Meal meal : MealsUtil.meals) {
-                    if (meal.getMealId() == id) {
-                        MealsUtil.meals.remove(meal);
+                for (MealTo meal : mealToList) {
+                    if (meal.getMealToId() == id) {
+                        mealToList.remove(meal);
+                        log.debug("removed!");
 
                     }
                 }

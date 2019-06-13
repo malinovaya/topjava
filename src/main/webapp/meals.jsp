@@ -27,7 +27,9 @@
             <td><form method="get" action="/topjava/meals"><button name="action" value="update">Update</button>
             </form>
             </td>
-            <td><form method="get" action="/topjava/meals"><button name="action" value="delete">Delete</button>
+            <td><form method="get" action="/topjava/meals">
+                <input type="hidden" name="mealToId" value="${meal.mealToId}" />
+                <button name="action" value="delete">Delete</button>
                 </form>
             </td>
         </tr>
